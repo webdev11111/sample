@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Aptitude Test - Computer Science</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        #submitBtn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Mock Aptitude Test - Computer Science</h2>
+
+    <div class="question">
+        <p>1. What does HTML stand for?</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="a"> Hyper Text Markup Language</label>
+            <label><input type="radio" name="q1" value="b"> High-Level Text Markup Language</label>
+            <label><input type="radio" name="q1" value="c"> Hyperlink and Text Markup Language</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>2. What is the capital of JavaScript?</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="a"> Java City</label>
+            <label><input type="radio" name="q2" value="b"> Scriptville</label>
+            <label><input type="radio" name="q2" value="c"> None of the above</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>3. In programming, what does the acronym 'API' stand for?</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="a"> Application Programming Interface</label>
+            <label><input type="radio" name="q3" value="b"> Advanced Programming Interface</label>
+            <label><input type="radio" name="q3" value="c"> Application Program Interface</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>4. What are the key principles of algorithm design, and how do they impact the efficiency of computer programs?</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="a"> Data storage techniques</label>
+            <label><input type="radio" name="q4" value="b"> Sorting algorithms</label>
+            <label><input type="radio" name="q4" value="c"> Object-oriented programming</label>
+        </div>
+    </div>
+
+    <div class="question">
+        <p>5. How does the concept of "big data" influence the development of algorithms and data?</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="a"> Emphasis on space complexity</label>
+            <label><input type="radio" name="q5" value="b"> Increased reliance on sequential search</label>
+            <label><input type="radio" name="q5" value="c"> Integration of parallel processing</label>
+        </div>
+    </div>
+
+    <button id="submitBtn" onclick="submitTest()">Submit</button>
+
+    <div id="result"></div>
+
+    <script>
+        function submitTest() {
+            // Dummy scoring logic - replace with actual scoring logic
+            var score = 0;
+
+            var q1Answer = document.querySelector('input[name="q1"]:checked');
+            var q2Answer = document.querySelector('input[name="q2"]:checked');
+            var q3Answer = document.querySelector('input[name="q3"]:checked');
+            var q4Answer = document.querySelector('input[name="q4"]:checked');
+            var q5Answer = document.querySelector('input[name="q5"]:checked');
+
+            if (q1Answer && q1Answer.value === 'a') {
+                score++;
+            }
+
+            if (q2Answer && q2Answer.value === 'c') {
+                score++;
+            }
+            if (q3Answer && q3Answer.value === 'a') {
+                score++;
+            }
+            if (q4Answer && q4Answer.value === 'b') {
+                score++;
+            }
+            if (q5Answer && q5Answer.value === 'c') {
+                score++;
+            }
+
+
+
+            // Add more scoring logic for additional questions
+
+            // Display the result
+            document.getElementById('result').innerHTML = 'Your score: ' + score + ' out of 5';
+        }
+    </script>
+
+</body>
+
+</html>

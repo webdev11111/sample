@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Preparation Class</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: seagreen;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interview Preparation Class</h1>
+    </header>
+
+    <section>
+        <h2>Welcome to our Online Class!</h2>
+        <p>Get ready for your upcoming interviews with our comprehensive interview preparation class. Our experienced instructors will guide you through various technical and behavioral aspects of interviews in the computer science field.</p>
+
+        <h3>Enroll Now!</h3>
+        <form id="enrollment-form" onsubmit="enroll(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Enroll Now</button>
+        </form>
+
+        <p id="enrollment-status"></p>
+    </section>
+
+    <script>
+        function enroll(event) {
+            event.preventDefault(); // Prevents the form from submitting and refreshing the page
+
+            // Simulate an enrollment process (in a real application, this would involve backend logic)
+            // For simplicity, just display a success message here
+            document.getElementById('enrollment-status').innerText = 'Enrollment successful! Welcome to the class.';
+        }
+    </script>
+</body>
+</html>

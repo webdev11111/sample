@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected Students List</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: seagreen;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selected Students List</h1>
+    </header>
+
+    <section>
+        <h2>Computer Science Department</h2>
+        <p>View the list of selected students in the computer science department:</p>
+
+        <ul id="selected-students-list">
+            <!-- List of selected students will be dynamically added here -->
+        </ul>
+    </section>
+
+    <script>
+        // Sample data for selected students (replace this with actual data from your system)
+        const selectedStudentsData = [
+            { name: 'John Doe', rollNumber: 'CS001', grade: 'A' },
+            { name: 'Jane Smith', rollNumber: 'CS002', grade: 'B' },
+            { name: 'Bob Johnson', rollNumber: 'CS003', grade: 'A-' },
+            { name: 'Alice Williams', rollNumber: 'CS004', grade: 'B+' },
+  { name: 'Charlie Brown', rollNumber: 'CS005', grade: 'A' },
+  { name: 'David Miller', rollNumber: 'CS006', grade: 'B-' },
+  { name: 'Emily Davis', rollNumber: 'CS007', grade: 'C+' },
+  { name: 'Frank Wilson', rollNumber: 'CS008', grade: 'A' },
+  { name: 'Grace Lee', rollNumber: 'CS009', grade: 'B' },
+  { name: 'Henry Turner', rollNumber: 'CS010', grade: 'A+' },
+  { name: 'Ivy White', rollNumber: 'CS011', grade: 'B-' },
+  { name: 'Jack Robinson', rollNumber: 'CS012', grade: 'C' },
+  { name: 'Katie Harris', rollNumber: 'CS013', grade: 'A-' },
+  { name: 'Liam Anderson', rollNumber: 'CS014', grade: 'B+' },
+  { name: 'Mia Thompson', rollNumber: 'CS015', grade: 'A' },
+  { name: 'Noah Garcia', rollNumber: 'CS016', grade: 'B' },
+  { name: 'Olivia Brown', rollNumber: 'CS017', grade: 'A-' },
+  { name: 'Peyton Smith', rollNumber: 'CS018', grade: 'C+' },
+  { name: 'Quinn Johnson', rollNumber: 'CS019', grade: 'A' },
+  { name: 'Ryan Taylor', rollNumber: 'CS020', grade: 'B-' },
+  { name: 'Sophie Martinez', rollNumber: 'CS021', grade: 'A+' },
+  { name: 'Thomas Clark', rollNumber: 'CS022', grade: 'B' },
+  { name: 'Uma Patel', rollNumber: 'CS023', grade: 'A-' },
+  { name: 'Victor Hall', rollNumber: 'CS024', grade: 'C' },
+  { name: 'Wendy Adams', rollNumber: 'CS025', grade: 'B+' },
+  { name: 'Xavier Brown', rollNumber: 'CS026', grade: 'A' },
+  { name: 'Yara Khan', rollNumber: 'CS027', grade: 'B-' },
+  { name: 'Zane Wilson', rollNumber: 'CS028', grade: 'C+' },
+  { name: 'Amelia Turner', rollNumber: 'CS029', grade: 'A-' },
+  { name: 'Benjamin Cooper', rollNumber: 'CS030', grade: 'B' },
+  { name: 'Cora Davis', rollNumber: 'CS031', grade: 'A+' },
+  { name: 'Dylan Smith', rollNumber: 'CS032', grade: 'B' },
+  { name: 'Ella Thompson', rollNumber: 'CS033', grade: 'A-' },
+  { name: 'Finn Johnson', rollNumber: 'CS034', grade: 'C' },
+  { name: 'Gabriella Wilson', rollNumber: 'CS035', grade: 'B+' },
+  { name: 'Henry Turner', rollNumber: 'CS036', grade: 'A' },
+  { name: 'Isla Harris', rollNumber: 'CS037', grade: 'B-' },
+  { name: 'Jack Robinson', rollNumber: 'CS038', grade: 'C+' },
+  { name: 'Katherine Brown', rollNumber: 'CS039', grade: 'A-' },
+  { name: 'Liam Anderson', rollNumber: 'CS040', grade: 'B+' },
+        ];
+
+        // Function to display selected students in the list
+        function displaySelectedStudents() {
+            const selectedStudentsList = document.getElementById('selected-students-list');
+
+            // Clear existing list items
+            selectedStudentsList.innerHTML = '';
+
+            // Iterate through the student data and create list items
+            selectedStudentsData.forEach(student => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${student.name} - ${student.rollNumber} (Grade: ${student.grade})`;
+                selectedStudentsList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display selected students when the page loads
+        window.onload = displaySelectedStudents;
+    </script>
+</body>
+</html>
